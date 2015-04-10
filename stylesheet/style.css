@@ -1,0 +1,277 @@
+body, textarea, input {
+	background-color: #FFF;
+	color: #4a4444;
+	line-height: 1.6;
+}
+
+p {
+  line-height: 0;
+}
+
+.btn-primary {
+  background-color: #FF3700;
+}
+
+.header {
+  background-color: #FFF;
+  color:#000;
+}
+.header a.btn {
+  color: #FF3700;
+  background-color: #FFF;
+}
+.post-share{
+  display: block;
+  position: relative;
+}
+.avatar {
+  height: 25px;
+  width: 25px;
+  position: relative;
+}
+.avatar .avatar-image {
+  z-index: 10;
+  background-color: #fff;
+  margin-top: 6px;
+}
+
+.avatar-small .avatar-initials {
+  font-size: 13px;
+  line-height: 24px;
+  margin-top: 6px;
+}
+a.comments-link, a:link.comments-link, a:visited.comments-link, a:active.comments-link {
+  color: #444444;
+  font-weight: normal;
+  font-size: 0.65em;
+}
+
+a.edit-link, a:link.edit-link, a:visited.edit-link, a:active.edit-link {
+  color: #444444;
+  font-weight: normal;
+  font-size: 0.65em;
+}
+
+@media screen and (max-width: 600px) {
+  .posts-list .post-discuss {
+    display: none;
+  }
+  .posts-list .post-share{
+    display: none;
+  }
+}
+.post.sticky {
+  background: #fffce0;
+  border-bottom: 1px solid #FF3700;
+}
+.post-heading .post-domain {
+  color: #b3c1c6;
+  font-weight: normal;
+  display: none;
+}
+
+#hidden {
+  display: none;
+}
+.top-nav .header .categories-menu {
+  margin-right: 20px;
+  display: none;
+}
+div.mobile-nav > div > ul > li:nth-child(4) {
+  display: none;
+}
+.banner.banner {
+	background: rgba(255,255,255,0.7);
+	margin-bottom: 30px;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	border-width: 0.1em;
+	border-color: #FF3700;
+	border-style: solid;
+}
+
+textarea, input {
+	border-width: 0.1em;
+  	border-color: #FF3700;
+  	border-style: solid;
+}
+input[type="submit"] {
+  background-color: #FF3700;
+  color: #FFF;
+}
+
+form input[type="text"], form input[type="password"], form input[type="number"], form input[type="email"], form textarea {
+	border-width: 0.1em;
+  	border-color: #FF3700;
+  	border-style: solid;
+
+}
+.mobile-menu a, .mobile-menu a:link, .mobile-menu a:visited {
+  color: white;
+  text-align: left;
+}
+
+.header a.btn {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+.newsletter-email.newsletter-email {
+  display: inline-block;
+  margin-left: 20px;
+  width: auto;
+  vertical-align: middle;
+  border: 1px solid #FF3700;
+}
+
+.button.newsletter-button {
+	margin-left: 20px;
+	display: inline-block;
+	float: none;
+	vertical-align: middle;
+	position: relative;
+	background-color: #FF3700;
+}
+
+header {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 3em !important;
+}
+
+.header .nav>li {
+  margin-bottom: 0;
+  display: inline-block;
+  color: #000;
+}
+.top-nav .header .logo {
+  position: absolute;
+  display: block;
+  text-align: left;
+  color: white;
+  left: 0px;
+  margin-left: 50px;
+  right: 0px;
+}
+
+.header .nav>li:last-child .header-submodule {
+  margin-right: 0px;
+  color: #FF3700;
+  background-color: #FFF;
+}
+
+.mobile-menu-button .hamburger {
+  fill: #000;
+}
+
+.post-upvote .upvote-link i {
+  opacity: 1;
+  display: inline-block;
+  border-radius: 0%;
+  border: 0px solid rgba(221,52,22,0.3);
+  font-size: 20px;
+  color: #707070;
+  line-height: 0.6;
+  text-shadow: 0px 0px 0px white;
+  padding: 0em;
+
+}
+
+.post-upvote .upvote-link {
+  margin-right: 30px;
+}
+
+
+.post-upvote .upvote-link i:hover, .post-upvote .upvote-link i:active {
+  color: #FF3700;
+}
+
+.post-heading .post-title {
+  font-size: 22px;
+  color: #606060;
+  padding-right: 0.5em;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.post-upvote .upvote-link p {
+  border-radius: 6%;
+  line-height: 0.5;
+  color: #707070;
+  background-color: #e8e8e8;
+  font-size: 14px;
+  width: 36px;
+  height: 50px;
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+  padding: 0px 9px;
+  }
+
+.post-upvote .upvote-link.voted p, .post-upvote .upvote-link.voted i {
+  border-radius: 6%;
+  line-height: 0.6;
+  border: 0px solid rgba(221,52,22,0.3);
+  display: inline-block;
+  color: #FF3700;
+
+}
+
+.post {
+  padding: 10px 0px 20px 0px;
+}
+
+@media (min-width:640px) {
+.header .logo {
+  position: absolute;
+  display: block;
+  text-align: left;
+  color: white;
+  left: 0px;
+  right: 0px;
+}
+
+}
+
+.more-button {
+  background-color: #FFF;
+}
+
+.more-button span {
+  color: #FF3700;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.load-more-days-button span {
+  color: #FF3700;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+@media screen and (max-width: 1050px) {
+#logo-heading {
+  display: none;
+}
+
+}
+@media screen and (max-width: 600px) {
+.post .post-content .post-heading .post-domain {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  display: none;
+}
+.top-nav .header .logo {
+  position: absolute;
+  display: block;
+  text-align: left;
+  color: white;
+  left: 0px;
+  margin-left: 20%;
+  right: 0px;
+}
+
+
+}
+
+
+
+
+

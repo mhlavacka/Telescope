@@ -1,3 +1,19 @@
 <template name="postTitle">
   <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{title}}</a>
+  <div class="post-meta-item">
+    
+  <div style="display:inline-block;" aria-hidden="true" aria-live="off">
+    <a href="{{profileUrl userId}}" class="avatar-link avatar-small author-avatar">
+      {{> avatar userId=userId shape="circle"}}
+    </a>
+    
+  </div>
+  {{#if canEdit this}}
+      <a href="{{pathFor route='post_edit' _id=_id}}" class="edit-link goto-edit">{{_ "edit"}}</a>
+    {{/if}}
+  <a class="comments-link" href="/posts/{{_id}}">
+      <span class="comments-count">{{commentCount}}</span>
+      <span class="comments-action">{{_ 'comments_'}}</span>
+   </a>
+  </div>
 </template>
