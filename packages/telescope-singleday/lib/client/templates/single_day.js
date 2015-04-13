@@ -40,9 +40,9 @@ Template[getTemplate('singleDay')].created = function () {
     var terms = instance.getTerms();
 
     // get the postsLimit
-    terms.limit = instance.postsLimit.get();
+    // terms.limit = instance.postsLimit.get(); // SAMO: this limited Meter.subscribe('postsLists'
 
-    // console.log("Asking for " + terms.limit + " posts…")
+    // console.log("Asking for " + terms.limit + " postsâ€¦")
 
     // subscribe
     var postsSubscription = Meteor.subscribe('postsList', terms);
@@ -67,10 +67,17 @@ Template[getTemplate('singleDay')].created = function () {
 
   instance.getPostsCursor = function() {
     // console.log('loaded ' + instance.postsLoaded.get() + ' posts')
-    var termsLoaded = _.extend(instance.getTerms(), {limit: instance.postsLoaded.get()});
+    // SAMO: how it looked before -> var termsLoaded = _.extend(instance.getTerms(), {limit: instance.postsLoaded.get()});
+    var termsLoaded = _.extend(instance.getTerms(), {limit: instance.postsLimit.get()});
     var parameters = getPostsParameters(termsLoaded);
     return Posts.find(parameters.find, parameters.options);
   };
+
+  // SAMO: total number - notice limit is not included
+  instance.getMoreCount = function () {    
+    var parameters = getPostsParameters(instance.getTerms());
+    return Posts.find(parameters.find).count();
+  }
 
 };
 
@@ -99,6 +106,9 @@ Template[getTemplate('singleDay')].helpers({
 
       // whether to show the load more button or not
       hasMorePosts: postsCursor.count() >= instance.postsLimit.get(),
+
+      // SAMO: compare loaded and total
+      moreCount: instance.getMoreCount() - postsCursor.count(),
 
       // what to do when user clicks "load more"
       loadMoreHandler: function (instance) {

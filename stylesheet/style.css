@@ -24,6 +24,14 @@ p {
   display: block;
   position: relative;
 }
+.avatar-large {
+  height: 80px !important;
+  width: 80px !important;
+  position: relative;
+}
+.top-nav .header .search .search-field {
+  display: none;
+}
 .avatar {
   height: 25px;
   width: 25px;
@@ -36,8 +44,8 @@ p {
 }
 
 .avatar-small .avatar-initials {
-  font-size: 13px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 25px;
   margin-top: 6px;
 }
 a.comments-link, a:link.comments-link, a:visited.comments-link, a:active.comments-link {
@@ -52,14 +60,7 @@ a.edit-link, a:link.edit-link, a:visited.edit-link, a:active.edit-link {
   font-size: 0.65em;
 }
 
-@media screen and (max-width: 600px) {
-  .posts-list .post-discuss {
-    display: none;
-  }
-  .posts-list .post-share{
-    display: none;
-  }
-}
+
 .post.sticky {
   background: #fffce0;
   border-bottom: 1px solid #FF3700;
@@ -132,12 +133,20 @@ form input[type="text"], form input[type="password"], form input[type="number"],
 	position: relative;
 	background-color: #FF3700;
 }
+.newsletter-email.newsletter-email {
+  text-align: center;
+}
 
 header {
   border-bottom: 1px solid rgba(0,0,0,0.1);
   padding: 3em !important;
 }
-
+#tagline {
+  line-height: 2;
+  font-size: 1.2em;
+  color: #777;
+  max-width: 80%;
+}
 .header .nav>li {
   margin-bottom: 0;
   display: inline-block;
@@ -151,6 +160,14 @@ header {
   left: 0px;
   margin-left: 50px;
   right: 0px;
+}
+.search.empty .search-field {
+  text-align: left;
+  max-width: 240px;
+  min-width: 174px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid #FF3700;
+  border-radius: 0px;
 }
 
 .header .nav>li:last-child .header-submodule {
@@ -211,23 +228,12 @@ header {
   border: 0px solid rgba(221,52,22,0.3);
   display: inline-block;
   color: #FF3700;
+  background-color: #f0f0f0;
 
 }
 
 .post {
   padding: 10px 0px 20px 0px;
-}
-
-@media (min-width:640px) {
-.header .logo {
-  position: absolute;
-  display: block;
-  text-align: left;
-  color: white;
-  left: 0px;
-  right: 0px;
-}
-
 }
 
 .more-button {
@@ -245,6 +251,20 @@ header {
   font-weight: 400;
   font-size: 0.9em;
 }
+
+@media (min-width:640px) {
+.header .logo {
+  position: absolute;
+  display: block;
+  text-align: left;
+  color: white;
+  left: 0px;
+  right: 0px;
+}
+
+}
+
+
 @media screen and (max-width: 1050px) {
 #logo-heading {
   display: none;
@@ -267,11 +287,23 @@ header {
   margin-left: 20%;
   right: 0px;
 }
-
+.search.empty .search-field {
+  display: none;
+  text-align: left;
+  max-width: 240px;
+  min-width: 174px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid #FF3700;
+  border-radius: 0px;
+}
 
 }
 
-
-
-
-
+@media screen and (max-width: 600px) {
+  .posts-list .post-discuss {
+    display: none;
+  }
+  .posts-list .post-share{
+    display: none;
+  }
+}

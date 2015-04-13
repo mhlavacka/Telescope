@@ -60,7 +60,7 @@ Template[getTemplate('postsLoadMore')].helpers({
   },
   hasPosts: function () {
     return !!this.postsCursor.count();
-  }  
+  }
 });
 
 Template[getTemplate('postsLoadMore')].events({

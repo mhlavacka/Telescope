@@ -1,8 +1,9 @@
 <template name="postsDaily">
   <div class="grid">
+  	<div class="pull-right">{{>search}}</div>
     {{#each days}}
       {{> Template.dynamic template=before_day}}
-      <h2 class="posts-day-heading">{{formatDate date "dddd, MMMM Do"}}</h2>
+      <h2 class="posts-day-heading"><div style="font-size:1.25em;color:#FF3700;display:inline-block;">{{getDay date}}</div>   <div style="display:inline-block;">{{formatDate date "MMMM Do"}}</div></h2>
 
       {{> Template.dynamic template=singleDay data=context}}
 
